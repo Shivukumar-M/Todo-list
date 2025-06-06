@@ -4,6 +4,15 @@
 The Django Todo List application is a simple yet functional web app that allows users to manage tasks. Built using **Python** and **Django**, it features task creation, completion, and deletion functionalities with a clean user interface powered by **Bootstrap**.
 
 ---
+## Live Demo
+
+View the Todo-list live https://todo-list-pitv.onrender.com
+
+---
+##Screenshot
+![image](https://github.com/user-attachments/assets/b0ae011e-f681-4100-890c-7893e5018bd3)
+
+---
 
 ##  Features
 
