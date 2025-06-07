@@ -9,7 +9,9 @@ def create_todo(request):
     if request.method == 'POST':
         title= request.POST.get("title")
         description=request.POST.get('description')
-        Todo.objects.create(title=title, description=description)
+        # todo_date= request.Post.get('todo_date')
+        # progress = int(request.POST.get('progress', 0))
+        Todo.objects.create(title=title, description=description )      
     return redirect('Todo_list')
 
 def complete_todo(request,todo_id):

@@ -57,6 +57,7 @@
             <th>#</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Date</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -70,6 +71,26 @@
             <td class="{% if todo.completed %}text-muted{% endif %}">
               {{ todo.description }}
             </td>
+
+             <!-- Progress Bar Column -->
+           {% comment %} <td>
+            {% if todo.task %}
+              <small>Created on: {{ todo.task.created_at|date:"Y-m-d H:i" }}</small><br>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar" role="progressbar" style="width: {{ todo.task.progress }}%;" aria-valuenow="{{ todo.task.progress }}" aria-valuemin="0" aria-valuemax="100">
+                  {{ todo.task.progress }}%
+                </div>
+              </div>
+            {% else %}
+              <em>No task data</em>
+            {% endif %}
+          </td> {% endcomment %}
+            <td class="{% if todo.completed %}text-muted{% endif %}">
+              {{ todo.todo_date|date:"M d, Y" }}
+            </td>
+
+
+             {% comment %} buttons {% endcomment %}
             <td>
               {% if todo.completed %}
                 <span class="badge badge-success">✔ Completed</span>
